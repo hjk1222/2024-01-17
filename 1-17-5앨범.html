@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부트스트랩 갤러리</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <!-- 4버전 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- 5버전 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style type="text/css">
+        .photo {
+            width: 100%;
+            height: 220px;
+            background-color: #555;
+            color: #eee;
+            /* font-size: 3rem; */
+            font-size: 3vw;
+            text-align: center;
+            line-height: 220px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div id="navbarHeader" class="bg-dark collapse">
+            <!-- id이름은 내 맘대로 적어줘도 됨 -->
+            <!-- 이너가 잡히므로 container 구조만들어주기!-->
+            <div class="container">
+                <!-- 컨테이너 안에서 몇대몇 비율로 컨텐츠 들어갈건지를 고려해야함 -->
+                <!-- [여기]sm-8:4 , md-7:5 -->
+                <div class="row text-white">
+                    <div class="col-sm-8 col-md-7 py-4">
+                        <h4>About</h4>
+                        <p class="text-justify">
+                            <!-- text-justify: txt 양끝정렬 -->
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime debitis obcaecati excepturi
+                            accusamus laborum hic velit ut dolorum corporis dolore praesentium dicta, autem veritatis
+                            aut. Expedita, dicta illum. Tempora, accusamus!
+                        </p>
+                    </div> <!-- col-sm-8 -->
+
+                    <div class="col-sm-4 col-md-5 py-4">
+                        <!-- col-sm-4:모바일 / col-md-5: 태블릿 -->
+                        <h4>Contact</h4>
+                        <ul class="list-unstyled">
+                            <!-- list-unstyled : li들의 분립기호 삭제 -->
+                            <!-- mb-1: 4px를 떨궈준거임 -->
+                            <li class="mb-1"><a href="#" class="text-white">Follow on Twitter</a></li>
+                            <li class="mb-1"><a href="#" class="text-white">Like on Facebook</a></li>
+                            <li class="mb-1"><a href="#" class="text-white">Email me</a></li>
+                        </ul>
+                    </div> <!-- col-sm-4 -->
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- navbarHeader -->
+        <!-- 여기까지 헤더영역의 안보이는 부분 -->
+
+
+        <div class="navbar navbar-dark bg-dark shadow-sm navbar">
+            <div class="container">
+                <a href="#" class="navbar-brand">
+                    <!-- [???] navbar-brand란? -->
+                    <!-- 아이콘 넣기 -->
+                    <!-- css랑 스크립트 링크를 가져와서 붙여야 함, 링크가져오기 싫으면 이미지를 다운받아서 가져오기 -->
+                    <!-- [참고 아이콘링크] <i class="fa-regular fa-image"></i> -->
+
+                    <!-- [다운로드/확장자svg파일]<img src="img/image-regular.svg" alt="image-regular"> -->
+                    <img src="img/img-box-light.svg" alt="imgbox">
+                    <!-- <img src="img/Untitled-1.svg" alt="image-regular"> -->
+                    <!-- 내가만든 아이콘, 일러스트 툴에서 확장자 svg로. 또는 svg코드 입력하여 아이콘 넣기가능. -->
+                    <strong>Album</strong>
+
+
+                    <!-- css랑 스크립트 링크를 가져와서 붙여야 함 -->
+                    <!-- 링크가져오기 싫으면 이미지를 다운받아서 가져오기 -->
+                    <!-- [링크] <i class="fa-regular fa-image"></i> -->
+
+                    <!-- [설명]이미지다운 받았을때의 방법 -->
+                    <!-- 확장자.svg 코드로 만들어진 벡터이미지를 다운받는다. -->
+                </a> <!-- href="#" class="navbar-brand" -->
+
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarHeader">
+                    <span class="navbar-toggler-icon"></span>
+                    <!-- navbar-toggler-ico : 삼선버튼 아이콘 넣어주는 명령어;; -->
+                </button>
+            </div> <!-- [navbar] navbar-dark bg-dark -->
+        </div> <!-- navbar -->
+    </header> <!-- [header] -->
+
+
+
+
+
+
+    <section id="section">
+        <section class="container text-center py-5">
+            <div class="row">
+                <div class="col-lg-6 mx-auto col-md-8">
+                    <!-- col-lg-6 mx-auto col-md-8: 나머지 안쓰는 여백부분을 마진오토로 가운데 정렬! 영역 제한으로 그 안에서 글자 움직이도록 -->
+                    <h1>Album Examle</h1>
+                    <p class="text-muted">
+                        <!-- text-muted: 글자 약간 흐린 색상주기 -->
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis vitae, quia culpa vero
+                        quod
+                        sapiente ipsa doloremque fuga quisquam veniam harum eaque? Eaque, tempora? Asperiores quam animi
+                        quasi
+                        excepturi.
+                    </p>
+                    <a href="#" class="btn btn-primary m-2">Main call to action</a>
+                    <a href="#" class="btn btn-secondary m-2">Secondary action</a>
+                </div> <!-- col- -->
+
+            </div> <!-- row -->
+        </section> <!-- container text-center -->
+
+
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                    <!-- g-4 : gap -->
+                    <!-- 기본3개보기, 태블릿2개보기, -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text text-justify">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text text-justify">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text text-justify">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text text-justify">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                    <div class="col">
+                        <div class="card shadow-sm">
+                            <div class="photo">
+                                Thumbnail
+                            </div> <!-- photo -->
+                            <div class="card-body">
+                                <p class="card-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non modi, dignissimos,
+                                    libero velit nemo aspernatur eligendi reiciendis, corrupti accusamus nihil repellat
+                                    quaerat labore placeat impedit! Praesentium, ut? Doloremque, unde quia?
+                                </p> <!-- card-text -->
+                            </div> <!-- card-body -->
+                            <div class="d-flex justify-content-between align-item-center p-3">
+                                <div class="btn-group">
+                                    <button class="btn btn-sm btn-outline-secondary">View</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Edit</button>
+                                </div> <!-- btn-group -->
+                                <small>9 minute</small>
+                            </div>
+                        </div> <!-- card -->
+                    </div> <!-- col -->
+                </div> <!-- row -->
+            </div> <!-- container -->
+        </div> <!-- bg-light -->
+    </section> <!-- id:section -->
+
+
+
+
+
+    <footer class="py-5">
+        <div class="container">
+            <p class="mb-1">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+            <p class="mb-0">
+                Perferendis optio illum maiores ratione blanditiis.
+            </p>
+
+            <p class="float-end">
+                <a href="#header">Back to top</a>
+<!-- [다른 페이지 "사이트링크" 연결하는 방법]
+-같은경로여야함
+-파일명복붙해줘야함
+-다른경로면 ../ 으로 문 나가서 연결해줘야함
+-원하는 페이지 화면으로 뜨도록 해주려면 파일명 뒤에 열릴 파일의 id위치 #id이름 적어주기 -->
+            </p>
+        </div> <!-- container -->
+    </footer>
+
+
+</body>
+
+</html>
